@@ -41,16 +41,41 @@ const PolynomialFunction = () => {
         <div>
             <h2>Polynomial Function and Evaluation</h2>
             <label>Coefficients (space-separated):</label>
-            <input type="text" value={coefficients} onChange={(e) => setCoefficients(e.target.value)} placeholder="e.g. 3 -2 1" />
+            <input 
+                type="text" 
+                value={coefficients} 
+                onChange={(e) => setCoefficients(e.target.value)} 
+                placeholder="e.g. 3 -2 1" 
+            />
             <label>Exponents (space-separated):</label>
-            <input type="text" value={exponents} onChange={(e) => setExponents(e.target.value)} placeholder="e.g. 2 1 0" />
+            <input 
+                type="text" 
+                value={exponents} 
+                onChange={(e) => setExponents(e.target.value)} 
+                placeholder="e.g. 2 1 0" 
+            />
             <label>X Value:</label>
-            <input type="number" value={xValue} onChange={(e) => setXValue(e.target.value)} placeholder="Enter x" />
+            <input 
+                type="number" 
+                value={xValue} 
+                onChange={(e) => setXValue(e.target.value)} 
+                placeholder="Enter x" 
+            />
             <button onClick={calculate}>Calculate</button>
             <label>Polynomial Function:</label>
-            <input type="text" value={polynomialStr} readOnly placeholder="Result" />
+            <input 
+                type="text" 
+                value={polynomialStr} 
+                readOnly 
+                placeholder="Result" 
+            />
             <label>Evaluation Result:</label>
-            <input type="text" value={evaluation} readOnly placeholder="Evaluation" />
+            <input 
+                type="text" 
+                value={evaluation} 
+                readOnly 
+                placeholder="Evaluation" 
+            />
         </div>
     );
 };
