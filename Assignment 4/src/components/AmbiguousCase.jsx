@@ -32,9 +32,9 @@ const AmbiguousCase = () => {
     };
 
     const handleCalculate = () => {
+        const A = parseFloat(angleA);
         const a = parseFloat(sideA);
         const b = parseFloat(sideB);
-        const A = parseFloat(angleA);
 
         if (isNaN(a) || isNaN(b) || isNaN(A)) {
             setResult("Please fill in all fields correctly.");
@@ -49,6 +49,12 @@ const AmbiguousCase = () => {
             <h2>Ambiguous Case Triangle Checker</h2>
             <input
                 type="number"
+                placeholder="Angle A (degrees)"
+                value={angleA}
+                onChange={(e) => setAngleA(e.target.value)}
+            />
+            <input
+                type="number"
                 placeholder="Side A"
                 value={sideA}
                 onChange={(e) => setSideA(e.target.value)}
@@ -58,12 +64,6 @@ const AmbiguousCase = () => {
                 placeholder="Side B"
                 value={sideB}
                 onChange={(e) => setSideB(e.target.value)}
-            />
-            <input
-                type="number"
-                placeholder="Angle A (degrees)"
-                value={angleA}
-                onChange={(e) => setAngleA(e.target.value)}
             />
             <button onClick={handleCalculate}>Calculate</button>
             <input type="text" readOnly value={result} placeholder="Result" />
